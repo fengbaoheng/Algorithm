@@ -7,10 +7,11 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SortServiceTest {
-    private final int N = 50;
+    private final int N = 100;
     private final SortService[] services = {
             new SelectionSort(), new InsertionSort(),
-            new ShellSort()
+            new ShellSort(), new MergeSort(), new QuickSort(),
+            new BubbleSort(),
     };
 
     @Test

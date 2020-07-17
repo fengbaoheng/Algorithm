@@ -34,7 +34,7 @@ public class SortUtils {
         int[] arr = new int[length];
 
         for (int i = 0; i < length; i++) {
-            arr[i] = RANDOM.nextInt();
+            arr[i] = RANDOM.nextInt(length);
         }
 
         return arr;
