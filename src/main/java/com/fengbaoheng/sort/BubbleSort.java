@@ -1,5 +1,7 @@
 package com.fengbaoheng.sort;
 
+import com.fengbaoheng.utils.ArrayUtils;
+
 /**
  * 冒泡排序
  */
@@ -13,7 +15,7 @@ public class BubbleSort implements SortService {
             for (int i = 0; i < j; i++) {
                 if (arr[i] > arr[i + 1]) {
                     isSorted = false;
-                    swap(arr, i, i + 1);
+                    ArrayUtils.swap(arr, i, i + 1);
                 }
             }
 

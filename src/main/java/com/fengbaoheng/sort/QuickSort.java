@@ -1,5 +1,7 @@
 package com.fengbaoheng.sort;
 
+import com.fengbaoheng.utils.ArrayUtils;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
@@ -44,9 +46,9 @@ public class QuickSort implements SortService {
             if (p >= q) {
                 break;
             }
-            swap(arr, p, q);
+            ArrayUtils.swap(arr, p, q);
         }
-        swap(arr, low, q);
+        ArrayUtils.swap(arr, low, q);
         return q;
     }
 
@@ -62,7 +64,7 @@ public class QuickSort implements SortService {
         final int N = arr.length;
         for (int i = N - 1; i > 0; i--) {
             int j = random.nextInt(i + 1);
-            swap(arr, i, j);
+            ArrayUtils.swap(arr, i, j);
         }
     }
 }

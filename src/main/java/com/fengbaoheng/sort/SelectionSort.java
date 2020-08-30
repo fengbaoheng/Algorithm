@@ -1,5 +1,7 @@
 package com.fengbaoheng.sort;
 
+import com.fengbaoheng.utils.ArrayUtils;
+
 /**
  * 选择排序
  */
@@ -20,7 +22,7 @@ public class SelectionSort implements SortService {
             }
 
             // 交换最小值， 发生不稳定排序的地方
-            swap(arr, i, minIndex);
+            ArrayUtils.swap(arr, i, minIndex);
         }
     }
 }

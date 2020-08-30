@@ -1,12 +1,9 @@
-package com.fengbaoheng.sort;
+package com.fengbaoheng.utils;
 
+import java.util.Arrays;
 import java.util.Random;
 
-/**
- * 辅助排序的工具算法
- */
-public class SortUtils {
-
+public class ArrayUtils {
     private static final Random RANDOM = new Random();
 
     /**
@@ -38,5 +35,20 @@ public class SortUtils {
         }
 
         return arr;
+    }
+
+    /**
+     * 随机打乱数组
+     */
+    public static void shuffle(int[] arr) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            swap(arr, i, RANDOM.nextInt(i + 1));
+        }
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
     }
 }

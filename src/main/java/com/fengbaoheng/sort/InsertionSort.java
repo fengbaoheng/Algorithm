@@ -1,5 +1,7 @@
 package com.fengbaoheng.sort;
 
+import com.fengbaoheng.utils.ArrayUtils;
+
 /**
  * 插入排序
  */
@@ -15,7 +17,7 @@ public class InsertionSort implements SortService {
                 // 找到应该插入的位置
                 // 即第一个小于自己的数后侧
                 if (arr[j] < arr[j - 1]) {
-                    swap(arr, j, j - 1);
+                    ArrayUtils.swap(arr, j, j - 1);
                 } else {
                     break;
                 }

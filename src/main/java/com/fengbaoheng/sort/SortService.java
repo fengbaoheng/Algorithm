@@ -11,13 +11,4 @@ public interface SortService {
      * @param arr 待排序数组
      */
     void sort(int[] arr);
-
-    /**
-     * 交换数组中两个索引的位置
-     */
-    default void swap(int[] arr, int i, int j) {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-    }
 }

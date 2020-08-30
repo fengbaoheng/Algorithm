@@ -1,5 +1,7 @@
 package com.fengbaoheng.sort;
 
+import com.fengbaoheng.utils.ArrayUtils;
+
 /**
  * 希尔排序
  */
@@ -22,7 +24,7 @@ public class ShellSort implements SortService {
                 for (int j = i; j - h >= 0; j -= h) {
                     // 当前元素和前面相邻h距离的元素比较
                     if (arr[j] < arr[j - h]) {
-                        swap(arr, j, j - h);
+                        ArrayUtils.swap(arr, j, j - h);
                     } else {
                         break;
                     }
